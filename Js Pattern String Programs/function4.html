@@ -1,0 +1,14 @@
+<script>
+    var no;
+    let reverse= function(no){
+        var tmp=no;
+        var rev=0;
+        while (no>0){
+            var rem=no%10;
+            rev=rev*10+rem;
+            no=parseInt(no/10);
+        }
+        console.log(rev);
+    }
+    reverse(153);
+</script>

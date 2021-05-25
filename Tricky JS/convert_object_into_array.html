@@ -1,0 +1,16 @@
+<!-- convert object into array
+let x = {a:1,b:2};
+convert this object into array like
+y=[1,2]
+with only values not their keys -->
+
+<script>
+    var x = {a:1, b:2};
+    var y=[];
+    // y = Object.entries(x)
+    // for(let j in x){
+    //     y.push(j);
+    // }
+    y= Object.values(x)
+    console.log(y);
+</script>

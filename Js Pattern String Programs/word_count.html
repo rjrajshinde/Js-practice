@@ -1,0 +1,37 @@
+<script>
+let str = 'this is a new string. this string contains 10 words';
+    let wordCounter = -1;
+    let words = [];
+    let word = '';
+
+    let isWordPresent = function(word, words){
+        for(let i =0; i<words.length; i++)
+            if(word == words[i])
+                return true;
+        return false;
+    }
+
+    for(let i=0; i<str.length; i++){
+        if(str[i] == ' ' || str[i] == '.' || i == str.length -1){
+            !isWordPresent(word, words) && word != ''  ? words[++wordCounter] = word : '';
+            word = '';
+        }else
+            word += str[i];
+    }
+
+    word = '';
+    let wordCounters = [];
+    for(let i=0; i<words.length; i++){
+        wordCounters[i] = 0;
+        for(let j=0; j<str.length; j++){
+            if(str[j] == ' ' || str[j] == '.' || j == str.length -1){
+                if(word == words[i])
+                    wordCounters[i]++;
+                word = '';
+            }else
+                word+=str[j];
+        }
+    }
+    for(let index in words)
+        console.log(`${words[index]} repeated ${wordCounters[index]} times`);
+</script>

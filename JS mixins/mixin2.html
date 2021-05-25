@@ -1,0 +1,31 @@
+<script>
+    let mixin = {
+        sayhi() {
+            console.log(`hello ${this.name}`);
+        },
+        saybye() {
+            console.log(`Bye ${this.name}`);
+        }
+    }
+
+    let mixinpro = {
+        _proto_: mixin,
+        sayyo() {
+            console.log(`yo ${this.name}`);
+        }
+    }
+
+    class User {
+        constructor(name) {
+            this.name = name;
+        }
+    }
+
+    Object.assign(User.prototype, mixinpro);
+
+    // new User("king").sayhi();
+    // new User("king").saybye();
+    var k =new User('king');
+    k.sayyo();
+    // new User("king").sayyo();
+</script>

@@ -1,0 +1,22 @@
+<script>
+    var str= "this is a string"
+
+    let chars = [];
+    chars[0] = str[0]
+
+    let checkChar = (char,arr) => {
+        if(arr.indexOf(char) == -1)
+            arr.push(char);
+    }
+
+    for(let i=0; i<str.length; i++){
+        for(let j=0; j<str.length; j++){
+            if(i!=j){
+                if(str[i] == str[j]){
+                    checkChar(str[i], chars)
+                }
+            }
+        }
+    }
+    console.log(chars)
+</script>

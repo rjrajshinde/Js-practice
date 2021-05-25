@@ -1,0 +1,95 @@
+<script>
+    var no = parseInt(prompt("enter no"));
+    var u = no % 10;
+    var t = parseInt(no / 10) ;
+    var str = "";
+
+//11 to 19 
+    if(t === 1){
+        if(u === 1){
+            str += "Eleven";
+        }else
+        if(u === 2){
+            str += "Twelve";
+        }else
+        if(u === 3){
+            str += "Thirteen";
+        }else
+        if(u === 4){
+            str += "Fourteen";
+        }else
+        if(u === 5){
+            str += "Fifteen";
+        }else
+        if(u === 6){
+            str += "Sixty";
+        }else
+        if(u === 7){
+            str += "Seventy";
+        }else
+        if(u === 8){
+            str += "Eighteen";
+        }else
+        if(u === 9){
+            str += "Ninteen";
+        }else{}
+    }
+
+    
+    //10 to 90
+
+        if(t === 1 && u === 0){
+            str += "ten ";
+        }else
+        if(t === 2){
+            str += "twenty ";
+        }else
+        if(t === 3){
+            str += "thirty ";
+        }else
+        if(t === 4){
+            str += "fourty ";
+        }else
+        if(t === 5){
+            str += "fifty ";
+        }else
+        if(t === 6){
+            str += "sixty ";
+        }else
+        if(t === 7){
+            str += "seventy ";
+        }else
+        if(t === 8){
+            str += "eighty ";
+        }else
+        if(t === 9){
+            str += "ninty ";
+        }else{}
+    
+    
+
+    //1 to 9
+    if(t != 1){
+        if(u === 1){
+            str += "one";
+        }else if(u === 2){
+            str += "two";
+        }else if(u === 3){
+            str += "three";
+        }else if(u === 4){
+            str += "four";
+        }else if(u === 5){
+            str += "five";
+        }else if(u === 6){
+            str += "six";
+        }else if(u === 7){
+            str += "seven";
+        }else if(u === 8){
+            str += "eight";
+        }else if(u === 9){
+            str += "nine";
+        }else{}
+    }
+
+        console.log(str);
+</script>

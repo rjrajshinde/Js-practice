@@ -1,0 +1,53 @@
+<script>
+    let a=[1,2,4,2,1,4,5]; //output is to be  a =[1,2,4,5];
+
+    let b =[];
+    let a_length = a.length;
+
+    //with indexOf function
+    for(let i=0; i<a_length; i++){
+        if(b.indexOf(a[i])=== -1){
+            b.push(a[i]);
+        }
+    }
+    console.log(b);
+
+    //without indexOf function
+    a.sort(); //to sort the array
+    var temp;
+    var c=[];
+    for(let i=0; i<a_length; i++){
+        if(a[i] !== temp){
+            c.push(a[i]);
+            temp = a[i];
+        }
+    }
+    console.log(c);
+
+    //with the use of the objects
+    var obj = {};
+    for(let i of a){
+        obj[i] = true;
+    }
+
+    let d = Object.keys(obj);
+    console.log(d);
+
+
+    //with the use of unique datatype 'Set' of es6
+    let e = new Set(a);
+    console.log('set')
+    console.log([...e])
+
+
+    //another method
+    let nums = [1, 2, 2, 3];
+    nums.forEach((c, index) => {
+        console.log(`${c},${index},${nums.indexOf(c)}`);
+    });
+    let num2 = nums.filter((f, index) => {
+        return nums.indexOf(f) === index;
+    });
+    console.log(num2)
+
+</script>

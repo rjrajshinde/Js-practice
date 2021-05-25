@@ -1,0 +1,21 @@
+<script>
+    var str="";
+    // for(let i=1; i<=5; i++){
+    //     for(let j=1; j<=7; j++){
+    //         // if(i==j || i==1 || i+j==8 )
+    //         //     i!=5 ? str+="* ": str+="";
+    //         // else
+    //         //     str+="  ";
+            
+    //     }
+    //     str += "\n";
+    // }
+
+    for(i=0; i<=5 ; i++){
+        for(j=0; j<=10; j++){
+            str+= i==0 || i+j==10 || i==j? "*": " "
+        }
+        str+="\n"
+    }
+    console.log(str); 
+</script>

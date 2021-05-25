@@ -1,0 +1,185 @@
+<script>
+    //methods in the objects == 
+        // this keyword in method is referred to the whole Object
+    //function ==
+        // this keyword in function is referred to the global or window object
+    // for example
+
+    const objectone= {
+        title : 'a',
+        name: [1,2,3],
+        showname:  function(){
+            console.log(this);// o/p- whole object objectone
+        }
+    }
+    objectone.showname();
+    
+    const objecttwo= {
+        title : 'a',
+        name: [1,2,3],
+        showname:  function(){
+            console.log(this.name); // o/p - name array from objecttwo
+        }
+    }
+    objecttwo.showname();
+
+    const objectthree= {
+        title : 'a',
+        name: [1,2,3],
+        showname:  function(){
+            this.name.forEach(function(){
+                console.log(this); // o/p - the window object or global scope 3 times because of foreach
+                //function refers to the window object 
+            })
+        }
+    }
+    objectthree.showname();
+    
+    const objectfour= {
+        title : 'a',
+        name: [1,2,3],
+        showname:  function(){
+            this.name.forEach(function(n){
+                console.log(n); // o/p - 1 2 3 
+            })
+        }
+    }
+    objectfour.showname();
+
+
+
+
+    // if you want to use the strict then just uncomment this following statement
+    // 'use strict';
+
+
+    //this keyword in side the global scope
+    //consider the example of the house
+    this.table = 'window table'
+    console.log(window.table);
+
+
+
+    //this keyword inside the object
+    let sonRoom1 = {
+        table: 'sons table 1'
+    }
+    //here we can't access the table
+    // console.log(this.sonRoom.table); 
+
+    //we have to call with object name
+    console.log(sonRoom1.table);
+
+
+
+    //this keyword inside the method
+    let sonRoom2 = {
+        table: 'sons table 2',
+        cleantable: function () {
+            console.log(`${this.table} is cleaned`)
+        }
+    }
+    sonRoom2.cleantable();
+
+
+
+    //this keyword in function 
+
+    this.chair = 'house chair';
+
+    const cleanChair1 = function () {
+        console.log(`cleaning ${this.chair}`)
+    }
+
+    // if we 'use strict' on top of the page then we can't access this.chair
+    //if you use strict then comment this statement
+    cleanChair1(); 
+
+    //if we 'use strick' on top of the page then we have to use the call to execute the function
+    cleanChair1.call(this);
+
+    // another function with the argument
+    const cleanChair2 = function (text) {
+        console.log(`cleaning ${this.chair} with ${text}`)
+    }
+
+    cleanChair2('soap');
+
+
+
+    
+    //this keyword in inner function or nested function
+    this.text = 'this keyword in inner function'
+    const outerFunction = function(){
+        const innerFunction =function() {
+            console.log(`here is the ${this.text}`)
+        }
+        innerFunction();
+    }
+
+    outerFunction();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let mymeetings = {
+//     meetings: 0,
+//     addMeetings: function(num){
+//         this.meetings+= num
+//     },
+//     summary: function(){
+//         return `You have ${this.meetings} meetings today`;
+//     },
+//     resetDay: () => {
+//         if(this.meetings = 0 ){
+//             return`You already have ${this.meetings} your meetings are already reset`;
+//         }else{
+//             this.meetings = 0;
+//             return`day is reset`;
+//         }
+//     }
+// }
+
+// mymeetings.addMeetings(3);
+// console.log(mymeetings.summary());
+// mymeetings.addMeetings(4);
+// console.log(mymeetings.summary());
+// console.log(mymeetings.resetDay());
+// console.log(mymeetings.summary());
+
+
+
+</script>

@@ -1,0 +1,69 @@
+<script>
+    // class User {
+    //     constructor(name, email) {
+    //         this.name= name,
+    //         this.email= email
+    //         this.score=0;
+    //     }
+    //     login(){
+    //         console.log(this.email,"logged in");
+    //         return this;
+    //     }
+    //     logOut(){
+    //         console.log(this.email,"logged out");
+    //         return this;
+    //     }
+    //         updateScore(){
+    //         this.score+=1;
+    //         console.log(this.email,'score is',this.score);
+    //         return this;
+    //     }
+    // }
+    // class Admin extends User        {
+    //     deleteUser(user){
+    //         users = users.filter(u=>{
+    //             return u.email != user.email ;
+    //         })
+    //     }
+    // }
+    // var user1=new User('king','king@king.com');
+    // var user2=new User('raj','raj@king.com');
+    // console.log(user2)
+    // var admin = new Admin('admin', 'admin@admin.com');
+    // var users = [user1, user2];
+    // console.log(users);
+    // admin.deleteUser(user1);
+    // console.log(users);
+
+
+    function User(name, email) {
+        this.name = name;
+        this.email = email;
+        }
+        User.prototype.login = function () {
+            console.log(this.email, 'loggid in');
+        }
+        User.prototype.logout = function () {
+            console.log(this.email, "logged out")
+        }
+    function Admin(...args){
+        User.apply(this, args);
+    }
+    Admin.prototype = Object.create(User.prototype);
+    Admin.prototype.deleteUser = function(user){
+        users = users.filter(u => {
+            return u.email != user.email;
+        })
+    }
+        var user1 = new User('raj', 'king@king.com');
+        var admin = new Admin('admin', 'admin@admin.com');
+        console.log(admin)
+        console.log(user1);
+        var users = [user1, admin];
+        console.log(users);
+        admin.deleteUser(user1)
+        console.log(users)
+        admin.login()
+        user1.login();
+        user1.logout();
+</script>

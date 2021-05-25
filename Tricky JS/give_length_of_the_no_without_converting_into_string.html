@@ -1,0 +1,19 @@
+<!-- if there is no = 1234;
+output will be 4
+because it consist 1, 2, 3, 4  
+like in the string the o/p will be lenght the of Number -->
+
+<script>
+    var no = 1231234;
+    function nolen(no) {
+        var count = 0;
+        while(no != 0){
+            no = parseInt(no/10);
+            count++;
+        }
+        // return count;
+        console.log(count);
+    }
+    // alert(nolen(no));
+    nolen(no);
+</script>

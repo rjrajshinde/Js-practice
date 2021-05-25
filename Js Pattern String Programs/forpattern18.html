@@ -1,0 +1,24 @@
+<script>
+    var str=""
+    var str1=""
+    var no =3;
+    for(i=1; i<=4; i++){
+        for(j=3; j>=i; j--){
+            str+=" ";
+        }
+        for(k=1; k<=i; k++){
+            str+=i+ " ";
+        }
+        for(l=1; l<=i; l++){
+            str1+=" "
+        }
+        for(m=3; m>=i; m--){
+            //str1+=(4-l+1)+ " ";
+            str1+=no+" ";
+        }
+        no--;
+        str+="\n"
+        str1+="\n"
+    }
+    console.log(str+str1)
+</script>

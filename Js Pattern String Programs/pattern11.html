@@ -1,0 +1,28 @@
+<script>
+    var str=""
+    for(i=1; i<=4; i++){
+        let high = (i * 2 - 1);
+        let mid = parseInt(high/2) + 1;
+        for(j=1, count = 0; j<=high; j++){  
+                if(j <= mid)
+                    str+= (++count);
+                else 
+                    str+=(--count)
+            
+        }
+        str+="\n"
+    }
+    for(i=3; i>=1; i--){
+        let high = (i * 2 - 1);
+        let mid = parseInt(high/2) + 1;
+        for(j=1, count = 0; j<=high; j++){  
+                if(j <= mid)
+                    str+= (++count);
+                else 
+                    str+=(--count)
+            
+        }
+        str+="\n"
+    }
+    console.log(str);
+</script>

@@ -1,0 +1,31 @@
+<script>
+    var str=""
+    var str2=""
+    for(i=1; i<=5; i++){
+        for(j=1; j<=i; j++){
+            str+="* "
+        }
+        for(let k=8;k>=(i*2)-1;k--){
+
+            str+="  "
+        }
+        for(let l=1;l<=i;l++){
+            str+="* "
+        }
+        str+="\n"
+    }
+    for(i=5; i>=1; i--){
+        for(j=1; j<=i; j++){
+            str+="* "
+        }
+        for(let k=8;k>=(i*2)-1;k--){
+
+            str+="  "
+        }
+        for(let l=1;l<=i;l++){
+            str+="* "
+        }
+        str+="\n"
+    }
+    console.log(str)
+</script>

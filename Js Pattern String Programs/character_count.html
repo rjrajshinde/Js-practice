@@ -1,0 +1,46 @@
+<script>
+    // var str="this is string"
+    // var count=[];
+    // for(i=0; i<str.length; i++){
+    //     count[i]=1;
+    //     for(j=0; j<str.length; j++){
+    //         if(i!=j && str[i]==str[j]){
+    //             count[i]++;
+    //         }
+    //     }
+    // }
+    // for(i=0; i<str.length; i++){
+    //         console.log(str[i]+ "=" +count[i]);
+    // }
+    // for(let index in count){
+    //     console.log(`${str[index]}= ${count[index]}`);
+    // }
+
+    let str = 'this is a string';
+    let chars = [str[0]];
+    let charCount = 0;
+    let isCharPresent = (char, chars)=>{
+        for(let i = 0; i<chars.length; i++){
+            if(char == chars[i])
+                return true;
+        }
+        return false;
+    }
+    for(let i=0; i<str.length; i++){
+        !isCharPresent(str[i], chars) ? chars[++charCount] = str[i] : '';
+    }
+    
+    let charCounter = [0];
+
+    for(let i=0; i< chars.length; i++){
+        charCounter[i]=0;
+        for(let j = 0; j<str.length; j++){
+            if(str[j] == chars[i])
+                charCounter[i]++;
+        }
+    }
+    
+    for(let index in chars)
+        console.log(`'${chars[index]}' repeated ${charCounter[index]} times`)
+
+</script>

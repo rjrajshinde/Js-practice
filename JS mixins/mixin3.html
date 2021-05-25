@@ -1,0 +1,20 @@
+<script>
+    // with functions 
+    let sayHiMixin= {
+        sayHi() {
+            alert(`Hello ${this.name}`);
+        },
+        sayBye() {
+            alert(`Bye ${this.name}`);
+        }
+    }
+
+    let User = function(name){
+        this.name = name;
+    }
+
+    let user = new User("king");
+
+    user = Object.assign(User, sayHiMixin);
+    console.log(user.sayHi());
+</script>

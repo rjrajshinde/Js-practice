@@ -1,0 +1,31 @@
+<script>
+    var str ="";
+    var str2="";
+    for(let i=1; i<=5; i++){
+        for(let j=5; j>=i; j--){
+            str+="*"
+        }
+        for(let k=2; k<=(i*2-1); k++){
+            str+=" "
+        }
+        for(let l=5; l>=i; l--){
+            str+="*"
+        }
+        str+="\n";
+    }
+    for(let m=1; m<=5; m++){
+        for(let n=1; n<=m; n++){
+            str2+="*"
+        }
+        for(let o=8; o>=(m*2-1); o--){
+            str2+=" "
+        }
+        for(let p=1; p<=m; p++){
+            str2+="*"
+        }
+        str2+="\n"
+    }
+
+    console.log(str+str2);
+    // console.log(str2);
+</script>

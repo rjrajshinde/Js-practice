@@ -1,0 +1,20 @@
+<script>
+    var no;
+    let pal= function(no){
+        var tmp=no;
+        var rev=0;
+        while (no>0){
+            var rem=no%10;
+            rev=rev*10+rem;
+            no=parseInt(no/10);
+            console.log(rev)
+        }
+        if(tmp==rev){
+            console.log("palindrome")
+        }else{
+            console.log("not a palindrome")
+        }
+        no++;
+    }
+    pal(153);
+</script>

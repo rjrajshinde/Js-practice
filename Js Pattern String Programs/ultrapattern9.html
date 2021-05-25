@@ -1,0 +1,21 @@
+<script>
+    var str=""
+    var str2=""
+    for(i=1,count=2; i<=4; i++,count++){
+        for(j=1; j<=i; j++){
+            str+=count-j;
+        }
+        for(k=2; k<=i; k++){
+            str+=k
+        }
+        str+="\n"
+        for(l=3, count2=4; l>=i; l--,count2--){
+            str2+=count2-i
+        }
+        for(m=i,count3=2; m<=2; m++,count3++){
+            str2+=count3
+        }
+        str2+="\n"
+    }
+    console.log(str+str2)
+</script>

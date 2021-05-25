@@ -1,0 +1,13 @@
+<script>
+    var n=5;
+    var ans=0,next=1,prev=0;
+    console.log(prev);
+    console.log(next);
+    for(var i=0; i<=n; i++){
+        ans=  prev+next;
+        prev= next;
+        next= ans;
+        console.log(ans);
+    }
+
+</script>

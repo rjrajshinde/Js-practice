@@ -1,0 +1,19 @@
+<script>
+    var str2="";
+    var str="kingjoker";
+
+    let calculateRowsForString = (len)=>{
+        let sum =0,  counter = 0;
+        while(sum<=len)
+            sum += ++counter;
+        return counter;
+    }
+
+    for(i=1, count = 0;i<=calculateRowsForString(str.length);i++){
+        for(j=1;j<=i;j++,count++){
+            str2+=str[count] != undefined ? str[count] : '*';
+        }
+        str2+="\n";
+    }
+    console.log(str2);
+</script>

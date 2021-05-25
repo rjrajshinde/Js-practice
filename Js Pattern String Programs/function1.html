@@ -1,0 +1,18 @@
+<script>
+    var n;
+    let prime = function(n){
+        count = 1;
+        for(var i=2; i<n; i++){
+           if(n % i == 0){
+                count=0;
+           }
+        }
+        if(count==1){
+            console.log("prime no");
+        }
+        else{
+            console.log("not prime no");
+        }
+    }
+    prime(4);
+</script>

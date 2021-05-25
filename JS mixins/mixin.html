@@ -1,0 +1,32 @@
+<script>
+    // with class and constructor
+    // mixin
+    let sayHiMixin = {
+        sayHi() {
+            alert(`Hello ${this.name}`);
+        },
+        sayBye() {
+            alert(`Bye ${this.name}`);
+        }
+    };
+
+    // usage:
+    class User {
+        constructor(name) {
+            this.name = name;
+        }
+    }
+
+    // copy the methods
+    Object.assign(User.prototype, sayHiMixin);
+
+    // now User can say hi
+
+    //with object call
+    let yo = new User("king");
+    yo.sayHi();
+    
+    // with anonomyus object call
+    new User("Dude").sayHi(); // Hello Dude!
+    new User("Dude").sayBye(); // Bye Dude!
+</script>

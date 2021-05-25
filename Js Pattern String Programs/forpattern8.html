@@ -1,0 +1,12 @@
+    <script>
+        //problem 7
+        var str="";
+        for(let i=1; i<=5; i++){
+            for(var j=1; j<=5; j++){
+                //str += i % 2 == 1 ? (j % 2 == 1 ? "1" : "#") : (j % 2 == 0 ? "1" : "#");
+                str+= (i-j) % 2 ==0 ? "1":"#"
+            }
+            str += "\n";
+        }
+        console.log(str);
+    </script>

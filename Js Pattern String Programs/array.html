@@ -1,0 +1,66 @@
+<script>
+    //simple array
+    var arr=[1,2,3,4,5,6,7,8,9];
+    console.log(arr);
+
+    //object of array
+    var student = {rollno: 54, "firstname": "Raj", "lastname": "Shinde", mobno: 7887419333};
+    console.log(student);
+
+    //array of object
+    var obj=[{"firstname":"raj"},{"lastname":"shinde"},{rollno:54},{mobno: '7887419333'}];
+    console.log(obj);
+
+    //multidimensional array
+    var matrix=[[1,2,3],[4,5,6],[7,8,9]];
+    console.log(matrix);
+    var show=[arr(),student()];
+    
+
+    //1.Array Literal
+    var arr = [];
+    console.log(arr)
+
+    //2. Using Array Object
+    var arr = new Array("5");
+    console.log(arr)
+
+    var obj = {"key1" : 1, "key": 2, "2": "AA"};
+    obj.ke2 = "AAA";
+    obj['aa'] = "AAA";
+    console.log(obj.key1)
+    console.log(obj['2'])
+
+    for(var item in obj){
+        console.log(obj[item])
+    }
+
+    console.log("_______________________ Loop ____________________________")
+    var multi = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ]
+
+    
+
+    for(i=0; i<multi.length; i++){
+        for(j=0; j<multi[i].length; j++)
+            console.log(multi[i][j])
+
+        console.log("********************")
+    }
+
+
+    for(i=1; i<=10; i++)
+        console.log(2 * i)
+
+    for(i=2, count = 1; count <= 10; i=i + 2, count ++)
+        console.log(i)
+
+    console.log("_______________________ Vars ____________________________")
+     i = 2;
+     i = i++ + ++i + --i + i++;
+     console.log(i)
+</script>
+ 

@@ -1,0 +1,89 @@
+<!-- let arr = [1, 2, 3, 4];
+
+if we take no 1 from array it gives addition of others like
+1 ====  2+3+4 = 9
+2 ====  1+3+4 = 8
+like that 
+write a function that gives a output of 
+maximun addition of no and minimum addtion of the no
+like
+arr = [1, 2, 3, 4];
+o/p = the maximun addition is 9 and minimum addition is 6 -->
+
+<script>
+    // let arr = [1, 2, 3, 4];
+    // var maxNo = arr[0];
+    // for (let i = 0; i <= arr.length; i++) {
+    //     if (arr[i] > maxNo) {
+    //         maxNo = arr[i];
+    //     }
+    // }
+    // var minNo = arr[0];
+    // for (let i = 0; i <= arr.length; i++) {
+    //     if (arr[i] < minNo) {
+    //         minNo = arr[i];
+    //     }
+    // }
+    // console.log(maxNo, minNo)
+
+    // var sum = 0;
+    // for (let i = 0; i <= arr.length - 1; i++) {
+    //     if (arr[i] != maxNo) {
+    //         sum += arr[i];
+    //     }
+    // }
+    // console.log(sum)
+    // var sum2 = 0;
+    // for (let i = 0; i <= arr.length - 1; i++) {
+    //     if (arr[i] != minNo) {
+    //         sum2 += arr[i];
+    //     }
+    // }
+    // console.log(sum2)
+
+
+    // function for finding the maximum number from array
+    function maxNo(arr) {
+        var maxNo = arr[0];
+        for (let i = 0; i <= arr.length; i++) {
+            if (arr[i] > maxNo) {
+                maxNo = arr[i];
+            }
+        }
+        return maxNo;
+    }
+
+    // function for finding the minimum number from array
+    function minNo(arr) {
+        var minNo = arr[0];
+        for (let i = 0; i <= arr.length; i++) {
+            if (arr[i] < minNo) {
+                minNo = arr[i];
+            }
+        }
+        return minNo;
+    }
+    function MinMaxResult(arr) {
+        let maxNumber = maxNo(arr);
+        let minNumber = minNo(arr);
+
+
+        let minSum = 0;
+        for (let i = 0; i <= arr.length - 1; i++) {
+            if (arr[i] != maxNumber) {
+                minSum += arr[i];
+            }
+        }
+        let maxSum = 0;
+        for (let i = 0; i <= arr.length - 1; i++) {
+            if (arr[i] != minNumber) {
+                maxSum += arr[i];
+            }
+        }
+        console.log(`The Maximum Sum is : ${maxSum} and Minimum Sum is : ${minSum}`);
+    }
+
+    let numArray = [1, 2, 3, 4, 5];
+    //function call
+    MinMaxResult(numArray);
+</script>

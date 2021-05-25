@@ -1,0 +1,19 @@
+<script>
+    var no = parseInt(prompt("enter the 3 digit No"));
+    var tmp= no;
+    var rem;
+    var rev=0;
+    while (no>0){
+        rem=no%10;
+        no=parseInt(no/10);
+        rev=rev*10+rem;
+    }
+    console.log("reverse no is" +rev);
+    if(tmp==rev){
+        console.log("Number is palandrome");
+    }
+    else{
+        console.log("Number is not a palandrome");
+    }
+ 
+</script>

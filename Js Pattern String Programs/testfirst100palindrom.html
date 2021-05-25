@@ -1,0 +1,17 @@
+<script>
+    for(var i=100, count=1; count<=100;i++){
+        var no=i;
+        var rem=0;
+        var rev=0;
+        var tmp=no;
+        while(no>0){
+            rem=no%10;
+            rev=rev*10+rem;
+            no=parseInt(no/10);
+        }
+        if(tmp==rev){
+            console.log(rev);
+            count++;
+        }
+    }
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 1</title>
+</head>
+
+<body>
+        <input type="text" id="val1" name="val1" placeholder="Enter the number">
+        <input type="text" id="val2" name="val2" placeholder="Enter the number">
+        <input type="button" id="add" onclick="add();" value="add"><br>
+        <input type="text" id="ans" name="ans">
+</body>
+<script>
+    function add() {
+        var val1 = document.getElementById('val1').value;
+        var val2 = document.getElementById('val2').value;
+
+        var sum = parseInt(val1) + parseInt(val2);
+        document.getElementById('ans').value = sum;
+    }
+</script>
+
+</html>

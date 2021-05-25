@@ -1,0 +1,13 @@
+<script>
+    var no =prompt(parseInt("enter a no"));
+        var u= no % 10;
+        var t= parseInt((no/10)%10);
+        var h= parseInt(no/100);
+        var tmp = u*u*u + t*t*t + h*h*h;
+        if(tmp==no){
+            console.log("this is armstrong no.")
+        }else{
+            console.log("this is not a armstrong no.")
+        }
+        
+</script>

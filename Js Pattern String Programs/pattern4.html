@@ -1,0 +1,10 @@
+<script>
+    var str=""
+    for(i=1; i<=7; i++){
+        for(j=1; j<=7; j++){
+            str+= i==4 || j==4 || i+j==5 || (j==6 &&(i==3 ||i==5)) || (j==5 &&(i==2 || i==6)) || i-3==j ? "* ":  "  ";
+        }
+        str+="\n"
+    }
+    console.log(str)
+</script>

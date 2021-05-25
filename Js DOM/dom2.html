@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom2</title>
+    <style>
+        #id1{
+            height: 200px;
+            width: 300px;
+            background-color: rgb(10, 9, 9);
+        }
+    </style>
+</head>
+<body>
+     <div id="id1"></div>
+     <button type="button" onclick="change();">change the color</button>
+     <button type="button" onclick="hide();">hide</button>
+     <button type="button" onclick="show();">show</button>
+
+     <script>
+         function change(){
+            document.getElementById('id1').style.backgroundColor="pink";
+         }
+         function hide(){
+             document.getElementById('id1').style.visibility = 'hidden';
+         }
+         function show(){
+            //  if(document.getElementById('id1').style.visibility = 'hidd';)
+             document.getElementById('id1').style.visibility = 'visible';
+         }
+     </script>
+</body>
+</html>

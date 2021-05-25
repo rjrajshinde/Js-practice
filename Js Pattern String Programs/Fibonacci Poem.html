@@ -1,0 +1,58 @@
+<script>
+    // var str="I wrote a poem on a page but then each line grew to the word sum of the previous two until I began to worry about all these words coming with such frequency"
+    // var arr1=[""]
+    // var count=0
+    // for(i=0; i<str.length; i++){
+    //     if(str[i]==" ")
+    //         arr1[++count]="";
+    //     else    
+    //         arr1[count]+=str[i]
+    // }
+    // console.log(arr1[0])
+    // console.log(arr1[1])
+    // var ans=[""]
+    // for(var i=2,count=2; i<=arr1.length-1; i++){
+    //     ans+= arr1[count-1]+arr1[count-2];
+    //     arr1[count-1]=arr1[count-2];
+    //     count++
+    //     console.log(ans);
+    // }
+
+    let str = "I wrote a poem on a page but then each line grew to the word sum of the previous two until I began to worry about all these words coming with such frequency";
+
+    str = str.split(" ");
+    let wordsCount = str.length;
+    let arr = [1];
+
+    console.log(str) 
+    var n=5;
+    var ans=0,next=1,prev=0;
+    let sum = 0;
+
+    let i = 0;
+    while(1){
+        ans=  prev+next;
+        prev= next;
+        next= ans;
+        i++;
+        
+        // console.log(ans, sum);
+        arr.push(ans);
+        sum+=ans;
+        if(sum > wordsCount )
+            break;     
+    }
+
+    let newStr = '';
+    let count = 0;
+    for(let k= 0; k<arr.length - 1; k++){
+        var item = arr[k]
+        
+        for(let i =1; i<= item; i++){
+            newStr += str[count++] + " "
+        }
+        newStr +='\n'
+    }
+
+    console.log(newStr)
+</script>

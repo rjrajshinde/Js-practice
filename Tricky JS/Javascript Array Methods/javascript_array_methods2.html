@@ -1,0 +1,111 @@
+<script>
+    const companies= [
+  {name: "Company One", category: "Finance", start: 1981, end: 2004},
+  {name: "Company Two", category: "Retail", start: 1992, end: 2008},
+  {name: "Company Three", category: "Auto", start: 1999, end: 2007},
+  {name: "Company Four", category: "Retail", start: 1989, end: 2010},
+  {name: "Company Five", category: "Technology", start: 2009, end: 2014},
+  {name: "Company Six", category: "Finance", start: 1987, end: 2010},
+  {name: "Company Seven", category: "Auto", start: 1986, end: 1996},
+  {name: "Company Eight", category: "Technology", start: 2011, end: 2016},
+  {name: "Company Nine", category: "Retail", start: 1981, end: 1989}
+];
+
+const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+// forEach 
+
+// comparison between the basic for loop and forEach
+
+// for(let i=0; i<companies.length; i++){
+//     console.log(companies[i].name);
+//     console.log(companies[i]);
+// }
+
+// companies.forEach((company)=>{
+//     console.log(company)
+//     console.log(company.name);
+// })
+
+//filter
+
+//comparison between the for loop and filter
+// let newAges =[]
+// for(let i=0; i<ages.length; i++){
+//     if(ages[i]>=21) {
+//        newAges.push(ages[i])
+//     }
+// }
+// console.log(newAges);
+
+//example 1
+// let newAgesFilter = ages.filter((age)=>{
+//     if(age >= 21){
+//         return age
+//     }
+// })
+// console.log(newAgesFilter);
+
+//one liner using filter and arrow fucntion
+// let newAgesOneLinerFilter = ages.filter(age => age>=21)
+// console.log(newAgesOneLinerFilter);
+
+//example 2
+// let companiesFilter = companies.filter((company)=>{
+//   if(company.category == "Retail")
+//     return company
+// })
+// console.log(companiesFilter);
+
+//one liner using filter and arrow fucntion
+// let companiesOneLinerFilter = companies.filter(company => company.category == "Retail")
+// console.log(companiesOneLinerFilter);
+
+//map
+
+//example 1
+// let companiesMap = companies.map((company)=>{
+//   return company.name
+// })
+// console.log(companiesMap);
+
+//example 2 
+// let companiesOneLinerMap = companies.map(company => `${company.name} [${company.start} - ${company.end}]`)
+// console.log(companiesOneLinerMap)
+
+//example 3
+// companies.map(company => console.log(`${company.name} [${company.start} - ${company.end}]`));
+
+//example 4
+// const agesMap1 = ages.map(age => Math.sqrt(age));
+// console.log(agesMap1)
+// const agesMap2 = ages.map(age => age * 2);
+// console.log(agesMap2)
+
+//method chaining in map
+// const ageChainingMap = ages
+//   .map(age=>Math.sqrt(age))
+//   .map(age=>age*2)
+// console.log(ageChainingMap)
+
+//reduce
+
+//comparing the for loop to reduce() method
+// let ageSum = 0;
+// for(let i = 0; i < ages.length; i++){
+//   ageSum += ages[i];
+// }
+// console.log(ageSum);
+
+let ageSumReduce = ages.reduce((total, age)=>{
+  return total += age
+},0)
+console.log(ageSumReduce)
+
+// one liner using reduce
+let ageSumOneLinerReduce = ages.reduce((total, age)=> total+age ,0);
+console.log(ageSumOneLinerReduce);
+
+
+
+</script>

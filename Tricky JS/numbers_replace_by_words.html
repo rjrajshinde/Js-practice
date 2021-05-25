@@ -1,0 +1,38 @@
+<!-- write a program that prints the numbers from 1 to 100
+but for multiples of three print "fizz" instead of the number and  for the multiples of the five prints "buzz"
+for the numbers which are multiples of both three and five print "fizzbuzz" -->
+
+<script>
+    // (function fizzbuzz(){
+    //     for(var i=1; i<=100; i++){
+    //         var str="";
+    //         if(i%3 == 0)
+    //             str+="fizz";
+    //         if(i%5 == 0)
+    //             str+="buzz"
+    //         if(str== "fizz" || str == "buzz" || str =="fizzbuzz"){
+    //             console.log(str);
+    //         }else{
+    //             console.log(i)
+    //         }
+    //         // console.log(i+" "+str)
+    //     }
+    // })();
+    function fizzbuzz() {
+        var str = [];
+        for (var i = 1; i <= 15; i++) {
+            if  (i % 3 == 0 && i % 5 == 0)
+                str.push("fizzbuzz");
+            else if (i % 5 == 0)
+                str.push("buzz");
+            else if (i % 3 == 0) {
+                str.push('fizz')
+            } else {
+                str.push(i);
+            }
+
+        }
+        return str;
+    }
+    console.log(fizzbuzz());
+</script>

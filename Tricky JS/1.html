@@ -1,0 +1,58 @@
+<script>
+    // + operator can applied to either both numbers or strings and in 
+    // other conditions it concate them
+    console.log(("2" + 2) -2 );
+    // - operator only applied to numbers in other conditions it convert 
+    // strings into number
+    console.log(2 - "2");
+
+    // to remove the duplication from array
+    // method 1
+ 
+    // method 2
+    let nums3 = [];
+    nums.forEach((c) => {
+        if (!nums3.includes(c)) {
+            nums3.push(c);
+        }
+    })
+    console.log(nums3);
+
+    // method 3
+    console.log([...new Set(nums)]);
+
+
+    console.log(5 < 6 < 7);//it solve first like (true<7) then true converted into number (1<7) hence it's output is true
+    console.log(7 > 6 > 5);//it solve first like (true>5) then true converted into number (1>5) hence it's output is false
+
+    //here we have to prevent the user to add the properties in Profile
+    let profile = {
+        name: "king"
+    }
+    console.log(profile)
+    profile.age = 21;//it adds the property in profile that we have to prevent
+    console.log(profile)
+
+    // ans
+    //by using the method we can prevent the user from adding the properties
+    Object.freeze(profile);//nor we can add or modify the property in profile object
+    Object.seal(profile);//we can't add property but we can modify the already added property
+    profile.age = 21;
+    console.log(profile)
+
+    // //another method to add the property using Object
+    // Object.defineProperty(profile, 'age', {
+    //     value: 3,
+    //     writable: true //if it's true we can modify it if it false then we can't 
+    // })
+
+    var nums1 = [1,2,2,1], nums2 = [2,2];
+    var intersection = function (nums1, nums2) {
+        var filter = nums1.filter(value => nums2.includes(value));
+        if (filter.length != 1) {
+            console.log([...new Set(filter)]);
+        }
+    };
+    intersection(nums1, nums2);
+
+</script>

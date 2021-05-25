@@ -1,0 +1,74 @@
+<script>
+    let array1 = [100, 300, 20, 400, 230, 612, 21, 411, 32, 6, 21];
+
+    //array.filter() method
+    // it is used for filtering the array 
+    let filteredarrya1 = array1.filter((array)=>{
+        return array >=100;
+    })
+    console.log(filteredarrya1);
+
+    let array2=[
+        {name: 'raj', price: 100},
+        {name: 'king', price: 450},
+        {name: 'yoyo', price: 21},
+        {name: 'joker', price: 194},
+        {name: 'rock', price: 200}
+    ];
+
+    //array.map() method
+    // basically used for object array
+    let maparray2 = array2.map((array)=>{
+        return array.name;
+        // return array.price;
+    }) 
+    console.log(maparray2)
+
+    //array.find() method
+    //it gives very first and only one item that matches with condition
+    //basically it findes the value but only one 
+    let findarray2 = array2.find((array)=>{
+        return array.name = 'raj';
+    })
+    console.log(findarray2)
+
+
+    //forEach method
+    //its same like when we take the values by using for loops
+    //for array1 example
+    array1.forEach((array)=>{
+        console.log(array);
+    })
+    //for array2 example
+    array2.forEach((array)=>{
+        console.log(array.name);
+    })
+    
+
+    //array.some() method
+    //output is in the form of boolean means true or false
+    // if the condition is satisfy then returns true otherwise false
+    let priceGreaterThan100 = array2.some((array)=>{
+        return array.price > 100 ;
+    })
+    console.log(priceGreaterThan100);
+
+
+    //array.reduce() method
+    //it is used to reduce array 
+    //means take array1 we can reduce by addition of all the values
+    //it is also used exchange for the for loop
+    let additionArray = array1.reduce((total, array)=>{
+        return array+total;
+    },1); //0 is the start position from where you want to start 
+    console.log('reduce method')
+    console.log(additionArray);
+
+
+    //array.include() method
+    //it gives output in boolean form (true or false)
+    //if the input is present in the array it gives true otherwise false
+    let includearray1 = array1.includes(100);
+
+    console.log(includearray1);
+</script>

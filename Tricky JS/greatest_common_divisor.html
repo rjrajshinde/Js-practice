@@ -1,0 +1,48 @@
+<!-- get greatest common divison between two numbers
+for example
+5, 15 => 5  greatest common divisor is 5 for 5 and 15 -->
+
+<script>
+    function greaterNo(num1, num2) {
+        if (num1 < num2)
+            return num2;
+        else if (num2 < num1)
+            return num1;
+    }
+    function divisor(num1, num2) {
+        var bigno = greaterNo(num1, num2);
+        var arr = [];
+        for (i = 2; i <= bigno; i++) {
+            if (num1 % i == 0 && num2 % i == 0) {
+                arr.push(i);
+            }
+        }
+
+        var largestno = 0;
+        for (j = 0; j <= arr.length; j++) {
+            if (arr[j] > largestno) {
+                largestno = arr[j];
+            }
+        }
+        console.log(largestno)
+    }
+    divisor(5,15);
+
+
+
+    // function divisor(num1, num2) {
+    //     var bigno = greaterNo(num1,num2);
+    //     console.log(bigno)
+    //     // var bigno = Math.max(num1, num2);
+    //     let n;
+    //     var no='';
+    //     for (i = 2; i <= bigno; i++) {
+    //         if (num1 % i == 0 && num2 % i == 0) {
+    //             no[i] += i
+    //         }
+    //     }
+    //     console.log(no)
+    // }
+
+    // divisor(20, 40);
+</script>

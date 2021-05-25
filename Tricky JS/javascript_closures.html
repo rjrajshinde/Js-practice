@@ -1,0 +1,43 @@
+<script>
+    //Closure
+    // everything is in outer function is access in the inside function
+    // means variable declare in global scope is accessible in local scope is called closure 
+    
+
+    //example 1 of closure
+    //without passing the arguments still it takes the value its called closure
+    var passed = 3;
+    var add = function () {
+        var no = 3;
+        return passed + no;
+    }
+
+    console.log(add());
+
+    //example 2 of closure
+    var name = 'raj';
+    function printname() {
+        return name;
+    }
+    console.log(printname());
+    
+    //here we change the value of the name
+    name = 'king';
+
+    console.log(printname());
+
+    //example 3 of closure
+    function one(x) { //fucntion 1
+        return function two(y) { //function 2 in function 1
+            console.log(x+y);
+        }
+    }
+
+    //we can call the above function in 2 ways
+    //1st way
+    let call = one(2);
+    call(2);
+
+    //2nd way
+    one(2)(2);
+</script>

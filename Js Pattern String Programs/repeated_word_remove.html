@@ -1,0 +1,28 @@
+<script>
+    var str="this is a string a is string"
+    count=0
+    var string=[""]
+    for(i=0; i<str.length; i++){
+        str[i] == " " ? string[++count] = "": string[count] += str[i]; 
+    }
+    console.log(string)
+
+    let chars = [];
+    // chars[0] = string[0]
+
+    let checkChar = (string,chars) => {
+        if(chars.indexOf(string) == -1)
+            chars.push(string);
+    }    
+
+    for(let i=0; i<string.length; i++){
+        for(let j=i+1; j<string.length; j++){
+            if(i!=j){
+                if(string[i] == string[j]){
+                    checkChar(string[i], chars)
+                }
+            }
+        }
+    }
+    console.log(chars)
+</script>

@@ -1,0 +1,35 @@
+<!-- You are given an integer array nums where the largest integer is unique.
+
+Determine whether the largest element in the array is at least twice as much as every other number in the array.
+If it is, return the index of the largest element, or return -1 otherwise.
+ -->
+ <!-- Input: nums = [3,6,1,0]
+ Output: 1
+ Explanation: 6 is the largest integer. it gives the position of the lagest no-->
+
+
+
+<script>
+    var dominantIndex = function(nums) {
+    var maxno = nums[0];
+    var index = 0;
+    var length = nums.length;
+    for(let i=0; i<length; i++){
+        if(maxno < nums[i]){
+            maxno = nums[i]
+            index =i;
+        }
+    }
+    for(let j=0; j<length; j++){
+        if(nums[j]!= maxno){
+            if(!(maxno >= (nums[j]*2))){
+                return -1;
+            }
+        }
+    }
+    return index;
+};
+
+var nums = [3,6,1,0];
+console.log(dominantIndex(nums));
+</script>
