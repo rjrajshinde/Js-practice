@@ -1,0 +1,27 @@
+<html>
+<label for="userInput">Type the input string you Want</label>
+<input type="text" id="userInput"=></input>
+<button onclick="nameWithABCD()">Submit</button>
+<h3 id="demo"></h3>   
+
+<script type="text/javascript">
+function nameWithABCD() {
+    var userInput = document.getElementById("userInput").value;
+    var str = userInput.toLowerCase();
+    var string = 'abcdefghijklmnopqrstuvwxyz';
+    var arr = [];
+    for (const ele of str) {
+        arr.push(ele);
+    }
+    for( const ele of string){
+        arr.push(ele)
+    }
+    let result = new Set(arr);
+    document.getElementById("demo").innerHTML = [...result];
+    // for (let i = 0; i < string.length; i++) {
+    //     if(!string[i].includes(str[i]))
+    //         arr.push(string[i])
+    // }
+}
+</script>
+</html>

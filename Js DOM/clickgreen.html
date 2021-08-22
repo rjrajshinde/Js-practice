@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .BOX {
+            display: grid;
+            grid-template-columns: 5% 5% 5%;
+            align-items: center;
+        }
+
+        .BOX div {
+            border: 1px solid black;
+            text-align: center;
+            padding: 25px;
+            margin: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .green {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="BOX">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+
+    <script>
+        const box = document.querySelectorAll('.box');
+        box.forEach((box) => {
+            box.addEventListener("click", function (e) {
+                const classes = e.currentTarget.classList;
+                if (classes.contains('box')) {
+                    classes.add('green')
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

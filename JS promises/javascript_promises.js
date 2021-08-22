@@ -13,9 +13,9 @@ let king = new Promise(function (resolve, reject) {
 });
 
 king.then(function (fromking) {
-  console.log("clean room " + fromking)
+  console.log("room " + fromking)
 }).catch(function (fromking) {
-  console.log('not clean' + fromking);
+  console.log('room ' + fromking);
 })
 
 
